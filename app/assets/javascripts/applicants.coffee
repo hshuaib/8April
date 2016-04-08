@@ -7,25 +7,25 @@ jQuery ->
    		 $(document).on "page:change", ->
    		     $('#disability_hear').click -> 
    		         $('#disability_hear1').fadeToggle()
-#   		         $('#details').fadeToggle()
+   		         $('#details').show()
 
 
    		 $(document).on "page:change", ->
    		     $('#disability_vision').click ->
    		         $('#disability_vision1').fadeToggle()
-#   		         $('#details').fadeToggle()
+   		         $('#details').show()
 
 
    		 $(document).on "page:change", ->
    		     $('#disability_move').click ->
    		         $('#disability_move1').fadeToggle()
-#   		         $('#details').fadeToggle()
+   		         $('#details').show()
 
 
    		 $(document).on "page:change", ->
    		     $('#disability_brain').click ->
    		         $('#disability_brain1').fadeToggle()
-#   		         $('#details').fadeToggle()
+   		         $('#details').show()
 				 
 				 
 

@@ -131,7 +131,7 @@
  	     	  <%= label_tag 'disability_hear', 'صعوبة في النطق'%> </br></br>
  		</td>
  		<td>
- 			<%= f.text_area :notes %> </br>
+ 			<%= f.text_area :notes %>
  		</td>
 		
  	 </tr>
@@ -157,7 +157,7 @@
  		     <%= label_tag 'disability_vision', 'ضعف بصري'%> </br></br> 
 
  		</td>
- 		<td class="tablespace fonty ">
+ 		<td>
  			 <%= f.text_area :notes %>  
 
  		</td>
@@ -176,8 +176,7 @@
  		      <%= check_box_tag 'applicant[disability][]', 'حركية', checkeda('حركية'), id: 'disability_move' %> </text>
  		     <%= label_tag 'disability_move', 'حركية'%>
  		</td>
- 		<td class="tablespace fonty">
-			<p class="tablespace fonty initiallyHidden" id= 'disability_move1'>
+ 		<td class="tablespace fonty initiallyHidden" id= 'disability_move1'>
  			 </br></br>   <%= check_box_tag 'applicant[details][]', 'كرسي متحرك', checkeda('كرسي متحرك'), id: 'disability_move' %> 
  			   <%= label_tag 'disability_move', 'كرسي متحرك'%><br>
   
@@ -189,11 +188,11 @@
   
  			    <%= check_box_tag 'applicant[details][]', 'إعاقة في الذراع', checkeda('إعاقة في الذراع'), id: 'disability_move' %> 
  			   <%= label_tag 'disability_move', 'إعاقة في الذراع'%> </br></br>
-	  		 </p>
+	  		 
 			   
  		</td>
  		<td>
- 			<p class=""> <%= f.text_area :notes %>  </p>
+ 			<%= f.text_area :notes %>
  		</td> 
 		
  	 </tr>
