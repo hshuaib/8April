@@ -31,7 +31,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'News was successfully created.' }
+        format.html { redirect_to @news, notice: 'تم إدخال الخبر الجديد بنجاح' }
         format.json { render :show, status: :created, location: @news }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class NewsController < ApplicationController
   def update
     respond_to do |format|
       if @news.update(news_params)
-        format.html { redirect_to @news, notice: 'News was successfully updated.' }
+        format.html { redirect_to @news, notice: 'تم تحديث الخبر بنجاح' }
         format.json { render :show, status: :ok, location: @news }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class NewsController < ApplicationController
   def destroy
     @news.destroy
     respond_to do |format|
-      format.html { redirect_to news_index_url, notice: 'News was successfully destroyed.' }
+      format.html { redirect_to news_index_url, notice: 'تم مسح الخبر  بنجاح' }
       format.json { head :no_content }
     end
   end
@@ -69,7 +69,7 @@ class NewsController < ApplicationController
   # this below code for checking if logged in user is the admin!
     def admin_only
      unless current_user.admin?
-       redirect_to :back, :alert => "Access denied."
+       redirect_to :back, :alert => "لا يمكن الدخول لهذه الصفحة"
      end
    end
   

@@ -26,7 +26,7 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
-        format.html { redirect_to members_url, notice: 'Member was successfully created.' }
+        format.html { redirect_to members_url, notice: 'تم إدخال العضو الجديد بنجاح' }
         format.json { render :show, status: :created, location: @member }
       else
         format.html { render :new }
@@ -40,7 +40,7 @@ class MembersController < ApplicationController
   def update
     respond_to do |format|
       if @member.update(member_params)
-        format.html { redirect_to members_url, notice: 'Member was successfully updated.' }
+        format.html { redirect_to members_url, notice: 'تم تحديث العضو بنجاح' }
         format.json { render :show, status: :ok, location: @member }
       else
         format.html { render :edit }
@@ -54,7 +54,7 @@ class MembersController < ApplicationController
   def destroy
     @member.destroy
     respond_to do |format|
-      format.html { redirect_to members_url, notice: 'Member was successfully destroyed.' }
+      format.html { redirect_to members_url, notice: 'تم مسح العضو بنجاح' }
       format.json { head :no_content }
     end
   end
@@ -63,7 +63,7 @@ class MembersController < ApplicationController
   # this below code for checking if logged in user is the admin!
     def admin_only
      unless current_user.admin?
-       redirect_to :back, :alert => "Access denied."
+       redirect_to :back, :alert => "لا يمكن الدخول لهذه الصفحة"
      end
    end
   

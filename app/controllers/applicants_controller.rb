@@ -31,7 +31,7 @@ class ApplicantsController < ApplicationController
 
     respond_to do |format|
       if @applicant.save
-        format.html { redirect_to page_path('requestSaved'), notice: 'Applicant was successfully created.' }
+        format.html { redirect_to page_path('requestSaved'), notice: 'تم إنشاد الطلب الجديد بنجاح' }
         format.json { render :show, status: :created, location: @applicant }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class ApplicantsController < ApplicationController
   def update
     respond_to do |format|
       if @applicant.update(applicant_params)
-        format.html { redirect_to @applicant, notice: 'Applicant was successfully updated.' }
+        format.html { redirect_to @applicant, notice: 'تم تحديث الطلب بنجاح' }
         format.json { render :show, status: :ok, location: @applicant }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class ApplicantsController < ApplicationController
   def destroy
     @applicant.destroy
     respond_to do |format|
-      format.html { redirect_to applicants_url, notice: 'Applicant was successfully destroyed.' }
+      format.html { redirect_to applicants_url, notice: 'تم مسح الطلب بنجاح' }
       format.json { head :no_content }
     end
   end
@@ -68,7 +68,7 @@ class ApplicantsController < ApplicationController
   # this below code for checking if logged in user is the admin!
     def admin_only
      unless current_user.admin?
-       redirect_to :back, :alert => "Access denied."
+       redirect_to :back, :alert => "لا يمكن الدخول لهذه الصفحة"
      end
    end
   

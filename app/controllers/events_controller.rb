@@ -30,7 +30,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'تم إنشاء الفعالية الجديدة بنجاح' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: 'تم تحديث الفعالية بنجاح' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to events_url, notice: 'تم مسح الفعالية بنجاح' }
       format.json { head :no_content }
     end
   end
@@ -68,7 +68,7 @@ class EventsController < ApplicationController
   # this below code for checking if logged in user is the admin!
     def admin_only
      unless current_user.admin?
-       redirect_to :back, :alert => "Access denied."
+       redirect_to :back, :alert => "لا يمكن الدخول لهذه الصفحة"
      end
    end
   
