@@ -247,6 +247,13 @@
     <%= f.text_field :reason %>
   </div>
     </br>
+	
+	
+	  <div class="field fonty formpad">
+	    <%= f.label :cv, "صورة بطاقة العضوية لجمعية ذوي الإعاقة"%><br>
+	    <%= f.file_field :cv, :required => true  %>
+	  </div>
+	</br>
 <hr>  
 
 
@@ -302,6 +309,15 @@
     <%= f.text_field :skills %>
   </div>
   </br>
+  
+	  <div class="field fonty formpad">
+	    <%= f.label :cv, "صورة السيرة الذاتية"%><br>
+	    <%= f.file_field :cv  %>
+	  </div>
+	
+  </br>
+  
+  
   
   <div class="field fonty formpad">
 	<input type= "checkbox" required name=" إعاقةحركية" value="إعاقة حركية" id="disability"> بتقديمي هذا الطلب، أوافق على مشاركة معلوماتي الشخصية مع الجهات والمؤسسات الباحثة عن موظف<br>

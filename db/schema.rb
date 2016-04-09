@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409143112) do
+ActiveRecord::Schema.define(version: 20160409175654) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "name"
@@ -36,12 +36,20 @@ ActiveRecord::Schema.define(version: 20160409143112) do
     t.text     "abilities"
     t.text     "preference"
     t.string   "skills"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "cv_file_name"
+    t.string   "cv_content_type"
+    t.integer  "cv_file_size"
+    t.datetime "cv_updated_at"
+    t.string   "membership_file_name"
+    t.string   "membership_content_type"
+    t.integer  "membership_file_size"
+    t.datetime "membership_updated_at"
   end
 
   create_table "companies", force: :cascade do |t|

@@ -89,6 +89,11 @@
 </p>
 
 <p class="fonty">
+    <strong<>بطاقة العضوية لجمعية ذوي الإعاقة:</strong>
+<%= image_tag @applicant.membership.url %>
+</p>
+
+<p class="fonty">
   <strong>المستوى التعليمي:</strong>
   <%= @applicant.education %>
 </p>
@@ -121,6 +126,11 @@
 <p class="fonty">
   <strong>الخبرات:</strong>
   <%= @applicant.skills %>
+</p>
+
+<p class="fonty">
+    <strong>صورة السيرة الذاتية:</strong>
+<%= image_tag @applicant.cv.url %>
 </p>
 
 <br>
