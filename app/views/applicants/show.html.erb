@@ -9,6 +9,7 @@
 <br>
 <div>
 <p class="fonty">
+    <strong>صورة البطاقة الشخصية:</strong>
 <%= image_tag @applicant.image.url %>
 </p>
 
@@ -98,8 +99,8 @@
 </p>
 
 <p class="fonty">
-  <strong>الوظيفة الحالية:</strong>
-  <%= @applicant.currentJob %>
+  <strong> هل يشغل وظيفة حاليًا:</strong>
+  <%= human_boolean(@applicant.currentJob) %>
 </p>
 
 <p class="fonty">

@@ -31,7 +31,7 @@ class ApplicantsController < ApplicationController
 
     respond_to do |format|
       if @applicant.save
-        format.html { redirect_to page_path('requestSaved'), notice: 'تم إنشاد الطلب الجديد بنجاح' }
+        format.html { redirect_to page_path('requestSaved'), notice: 'تم إدخال الطلب الجديد بنجاح' }
         format.json { render :show, status: :created, location: @applicant }
       else
         format.html { render :new }
