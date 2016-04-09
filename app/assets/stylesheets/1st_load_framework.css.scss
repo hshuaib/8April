@@ -212,6 +212,7 @@ float: right;
 {
 padding-right: 350px;
 }
+
 .eventheading
 {
 font-family: 'Droid Arabic Kufi', serif;
@@ -222,7 +223,11 @@ color:maroon;
 .tablespace{
 padding-left: 13px;
 padding-right: 13px;
- text-align: center;
+text-align: center;
+}
+
+.righttext {
+text-align: right;
 }
 
 .down

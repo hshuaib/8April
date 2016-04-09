@@ -41,6 +41,12 @@
   <br/>
   
   <div class="field fonty formpad">
+    <%= f.label :noOfEmployees, "عدد الموظفين المطلوبين" %><br>
+    <%= f.number_field :noOfEmployees, :required => true %>
+  </div>
+  <br/>
+  
+  <div class="field fonty formpad">
     <%= f.label :contactPerson, "اسم مقدم الطلب" %><br>
     <%= f.text_field :contactPerson, :required => true %>
   </div>
