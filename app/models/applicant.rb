@@ -2,7 +2,7 @@ class Applicant < ActiveRecord::Base
   
 	def self.search(search)
 		if search
-			where('name LIKE ? or nationality LIKE ? or DateOfBirth LIKE ? or gender LIKE ? 
+			where('name LIKE ? or nationality LIKE ? or dob LIKE ? or gender LIKE ? 
 				or status LIKE ? or mobileNo LIKE ? or education LIKE ? or currentJob LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
 		else
 			all
@@ -19,6 +19,11 @@ class Applicant < ActiveRecord::Base
 
   validates :name, :disability,  presence: true
   
+  
+  def self.getage(dob)
+    now = Time.now.utc.to_date
+    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
   
   before_save do
     self.disability.gsub!(/[\[\]\"]/, "") if attribute_present?("disability")

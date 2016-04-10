@@ -3,7 +3,7 @@ FactoryGirl.define do
     name "MyString"
 QID "MyString"
 nationality "MyString"
-DateOfBirth "2016-03-16"
+dob "2016-03-16"
 gender "MyString"
 status "MyString"
 noOfChildren 1

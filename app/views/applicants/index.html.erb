@@ -19,7 +19,7 @@
       <th class="tablespace eventheading down">الاسم</th>
   <%#    <th>الرقم الشخصي</th>	%>
       <th class="tablespace eventheading down">الجنسية</th>
-      <th class="tablespace eventheading down">تاريخ الميلاد</th>
+      <th class="tablespace eventheading down">العمر</th>
       <th class="tablespace eventheading down">الجنس</th>
       <th class="tablespace eventheading down">الحالة الإجتماعية</th>
    <%#   <th>عدد الأطفال</th>  %>
@@ -48,7 +48,7 @@
         <td class="tablespace fonty"><%= applicant.name %></td>
         <%#  <td><%= applicant.QID % ></td> %>
         <td class="tablespace fonty"> <%= applicant.nationality %></td>
-        <td class="tablespace fonty"><%= applicant.DateOfBirth %></td>
+        <td class="tablespace fonty"><%= Applicant.getage(applicant.dob) %></td>
         <td class="tablespace fonty"><%= applicant.gender %></td>
         <td class="tablespace fonty"><%= applicant.status %></td>
      <%#   <td><%= applicant.noOfChildren %></td> 

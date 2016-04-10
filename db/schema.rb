@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160409175654) do
     t.string   "name"
     t.string   "QID"
     t.string   "nationality"
-    t.date     "DateOfBirth"
+    t.date     "dob"
     t.string   "gender"
     t.string   "status"
     t.integer  "noOfChildren"
