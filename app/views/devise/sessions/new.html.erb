@@ -1,4 +1,4 @@
-<div class="authform">
+<div class="field fonty formpad">
 	
 	<br>
 	<br>	
@@ -6,26 +6,26 @@
 	<br>	
 	<br>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
-    <h3>Sign in</h3>
+    <h3>تسجيل الدخول</h3> <br>
     <%= devise_error_messages! %>
-    <div class="form-group">
-      <%= f.label :email %>
+    <div class="field fonty formpad">
+      <%= f.label :email, "الإيميل" %>
       <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
     </div>
-    <div class="form-group">
+    <div class="field fonty formpad">
       <%- if devise_mapping.recoverable? %>
-        <%= link_to "Forgot password?", new_password_path(resource_name), class: 'right' %>
+        <%= link_to "نسيت كلمة المرور؟", new_password_path(resource_name), class: 'right' %> <br><br>
       <% end -%>
-      <%= f.label :password %>
+      <%= f.label :password, "كلمة المرور" %>
       <%= f.password_field :password, class: 'form-control' %>
+	<br>
+    <% if devise_mapping.rememberable? -%>
+        <label> 
+          <%= f.check_box :remember_me %> تذكرني
+        </label> <br><br>
+      <%= f.submit 'تسجيل الدخول', :class => 'button right' %>
     </div>
-      <%= f.submit 'Sign in', :class => 'button right' %>
-      <% if devise_mapping.rememberable? -%>
-        <div class="checkbox" style="width:150px">
-          <label>
-            <%= f.check_box :remember_me %> Remember me
-          </label>
-        </div>
+
       <% end -%>
   <% end %>
 </div>

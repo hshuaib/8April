@@ -1,7 +1,7 @@
 <%= form_for @applicant, html: {multipart: true} do |f| %>
   <% if @applicant.errors.full_messages.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+      <h2><%= @applicant.errors.count %> أخطاء منعت هذا الطلب من الحفظ</h2>
       <ul>
       <% @applicant.errors.full_messages.each do |message| %>
         <li><%= message if @applicant.errors.full_messages.first == message %></li>

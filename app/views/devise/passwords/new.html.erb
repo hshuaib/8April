@@ -1,12 +1,14 @@
-<div class="authform">
+<br><br>
+
+<div class="field fonty formpad">
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :role => 'form'}) do |f| %>
-    <h3>Forgot your password?</h3>
-    <p>We'll send password reset instructions.</p>
+    <h3>نسيت كلمة المرور؟</h3>
+    <p class="field fonty formpad">سنرسل تعليمات لإعادة تعيين كلمة المرور</p>
     <%= devise_error_messages! %>
-    <div class="form-group">
-      <%= f.label :email %>
+    <div class="field fonty formpad">
+      <%= f.label :email, "الإيميل" %>
       <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
     </div>
-     <%= f.submit 'Reset Password', :class => 'button right' %>
+     <%= f.submit 'إعادة تعيين كلمة المرور', :class => 'button right' %>
   <% end %>
 </div>

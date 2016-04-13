@@ -16,9 +16,9 @@
   <thead>
     <tr>
 		<div class="field fonty formpad">
-		<button align='right'><%= form_tag companies_path, :method => 'get' do %>
+		<%= form_tag companies_path, :method => 'get' do %>
 		      <%= text_field_tag :search, params[:search] %>
-		      <button class='fonty' align='right'><%= submit_tag "بحث" %></button>
+		     <%= submit_tag "بحث" %>
 		      <% end %>
 		  	</div>
 			  
